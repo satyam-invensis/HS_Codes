@@ -57,7 +57,7 @@
                 return;
             }
 
-            axios.post('http://localhost:3000/login', { email, password })
+            axios.post('https://hs-codes-sigma.vercel.app/login', { email, password })
                 .then(function (response) {
                     console.log(response.data);
                     document.querySelector("#message").innerHTML = response.data.message;
