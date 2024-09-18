@@ -9,9 +9,10 @@ body {
     background-color: white; /* Light background color for contrast */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Allow scrolling */
     margin: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .main-container {
@@ -25,10 +26,17 @@ body {
     box-sizing: border-box;
 }
 
+.image-container {
+    max-width: 600px; /* Limit max width for the container */
+    width: 100%; /* Allow it to scale */
+    margin-top: 20px; /* Add top margin to ensure visibility */
+}
+
 .image-container img {
-    width: 600px; /* Increased width of the image */
+    width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure it covers the area if needed */
 }
 
 .form-container {
@@ -181,6 +189,9 @@ a:hover {
     #header h1 {
         font-size: 1.5em; /* Further decrease header font size */
     }
+    .image-container{
+        margin-top: 50px;
+    }
 
     input[type="text"],
     input[type="email"],
@@ -194,5 +205,6 @@ a:hover {
 
     label {
         font-size: 0.9em; /* Increase label font size */
+
     }
 }
