@@ -1,3 +1,4 @@
+/* Base Styles */
 body, h1, form, label, input, p {
     margin: 0;
     padding: 0;
@@ -38,9 +39,6 @@ body {
     max-width: 400px; /* Maximum width of the form container */
     width: 100%;
     text-align: center;
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove shadow */
-    /* Removed height and overflow properties */
 }
 
 #header h1 {
@@ -146,4 +144,56 @@ a:hover {
 
 .form-container .login-link {
     margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .main-container {
+        flex-direction: column; /* Stack image and form vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image responsive */
+        max-width: 400px; /* Limit the max width */
+    }
+
+    .form-container {
+        max-width: 90%; /* Use more width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 2em; /* Decrease header font size */
+    }
+
+    #header p {
+        font-size: 0.8em; /* Decrease subtitle font size */
+    }
+
+    input[type="submit"] {
+        padding: 12px; /* Increase padding on smaller screens */
+        font-size: 1em; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5em; /* Further decrease header font size */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 12px; /* Increase padding for inputs */
+    }
+
+    input[type="submit"] {
+        font-size: 1.2em; /* Increase button font size */
+    }
+
+    label {
+        font-size: 0.9em; /* Increase label font size */
+    }
 }
