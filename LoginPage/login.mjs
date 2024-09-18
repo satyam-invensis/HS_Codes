@@ -102,7 +102,7 @@ app.post('/login', async (req, res) => {
             username: user.username,
             email: user.email,
             message: 'Login successful.',
-            redirectUrl: 'https://satyam-invensis.github.io/HsCodeHosting-master/Frontend/index.html' // Change to your frontend URL if needed
+            redirectUrl: 'https://hs-codes-sigma.vercel.app/index.html' // Change to your frontend URL if needed
         });
     } catch (error) {
         console.error('Error during login:', error);
